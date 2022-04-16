@@ -2,6 +2,11 @@
 
 ### Laundry Management
 - [Problem statement](https://github.com/ineffable23/Laundry-Management#problem-statement-)
+- [Solution](https://github.com/ineffable23/Laundry-Management#solution-)
+- [Project Presentation](https://github.com/ineffable23/Laundry-Management#project-presentation-)
+- [Project Wireframe](https://github.com/ineffable23/Laundry-Management#project-wireframe-)
+- [Challenges Faced](https://github.com/ineffable23/Laundry-Management#challenges-faced)
+- [Future Scope](https://github.com/ineffable23/Laundry-Management#future-scope)
 
 
 ## Problem Statement :
