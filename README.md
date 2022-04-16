@@ -43,11 +43,67 @@ There will be two types of Users – Admin (the Owner) and Customer.
 
 ### Solution : 
 
+#### Functionality
+
+- Upon starting up, the application will give options for Log in, Sign up, forgot password, verify email, user dashboard, admin dashboard, home.
+- Sign up page takes Name, Email, Password and stores in firestore database.
+- Login takes emaail as Username and password and firebase is used for authentication.
+- user dashboard is acccessible by both end users and admin.
+- admin dashboard is only accessible by admin 
+
+
+#### Functionality for Admin user: 
+
+- Upon logging in, the application show three Buttons 
+- View Orders button shows a list of clothes which are due for washing, drying, ironing and delivery. 
+- Search or Delete button allows admin to delete or search on the Master data of Clothes given for washing or ironing.
+- Edit Orders button allows admin to create or update on the Master data of Clothes given for washing or ironing.
+- Admin can assign washing and ironing to his staff who is washing or ironing experts.
+- Washing and ironing experts can only take up to 100 clothes per day remaining clothes will be processed next day.
+- Task completion time is 150 minutes ( Preparing to wash is a 30 minutes process ) + ( Washing clothes is a 60 minutes process ) + ( Drying clothes is a 60 minutes process ).
+- Admin credentials are displayed at the bottom which can be edited(create/update/delete) by the admin.
+
+
+
+#### Functionality for Service Advisor:
+
+- Upon logging in, the application show three Buttons 
+- Track status button shows the status of the order on a progress bar 
+- Status stages : Orders placed, gone for washing, drying to ironing and ironing to delivery
+- Progress bar completes to 100% after 150 minutes ( Preparing to wash is a 30 minutes process ) + ( Washing clothes is a 60 minutes process ) + ( Drying clothes is a 60 minutes process )
+- Add Clothes button allows end user to place order.
+- It take Name, Email, Mobile Number, Cloth Type, Cloth fabric, Cloth Colour
+- Once the clothes are ready to be delivered by admin the customer will get a notification to collect them from Nobel Laundry
+
 
 #### Tools and technologies used:
 
-1.	Implemented front-end as a Single Page Application (SPA) using Angular or React.js
-2.	Implemented back-end with REST APIs Node.js, Express.js and Firestore database
-3.	Used Bootstrap, Material UI and ngx-toastr bor styling and layout
+1.	Implemented front-end as a Single Page Application (SPA) using Angular
+2.	Implemented back-end with REST APIs Node.js, Express.js, Firebase authentication and Firestore database
+3.	Used Bootstrap, Material UI, ngx-toastr, ngx-pagination for styling and layout
 4.	Assumptions regarding intermediate stages : Orders placed, gone for washing, drying to ironing and ironing to delivery
 5.	Progress bar completes to 100% after 150 minutes ( Preparing to wash is a 30 minutes process ) + ( Washing clothes is a 60 minutes process ) + ( Drying clothes is a 60 minutes process )
+
+#### Future Scope:
+
+- Role based authentication
+- Improved styling
+
+#### Challenges faced:
+
+- Learnt to implement various angular package modules such as  ngx-toastr, ngx-pagination
+- Learnt to implement Material UI from scratch
+- Learnt and performed Firebase CRUD
+- Designed the structure of the entire application
+- [error] Error [ERR_REQUIRE_ESM]: require() of ES Module <br> <br>
+  ![Screenshot (445)](https://user-images.githubusercontent.com/49369387/163671219-525086bf-13df-4cf0-97b1-8d17603909e5.png)
+  ![Screenshot (446)](https://user-images.githubusercontent.com/49369387/163671220-238dc66c-7824-47fb-a0d7-b648c8f6f192.png)
+
+
+- I tried to resolve this error through various methods mentioned on [stack overflow](https://stackoverflow.com/questions/69081410/error-err-require-esm-require-of-es-module-not-supported) and github still it was of no use. <br>
+- ![Screenshot (447)](https://user-images.githubusercontent.com/49369387/163671221-64aed767-1e1a-4ecc-85ee-87a72cb6ed8a.png)
+  
+  
+ #### Project Presentation :
+ - [Laundry-Management-Presentation]()
+
