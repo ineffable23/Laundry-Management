@@ -6,11 +6,7 @@ import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firest
 import { Observable } from 'rxjs';
 // import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
-export interface DialogData {
-    animal: string;
-    name: string;
-  }
-  
+
 
 @Component({
     selector: 'app-dashboard',
