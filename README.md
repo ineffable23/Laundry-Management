@@ -67,7 +67,7 @@ There will be two types of Users – Admin (the Owner) and Customer.
 
 #### Functionality for Service Advisor:
 
-- Upon logging in, the application show three Buttons 
+- Upon logging in, the application show two Buttons 
 - Track status button shows the status of the order on a progress bar 
 - Status stages : Orders placed, gone for washing, drying to ironing and ironing to delivery
 - Progress bar completes to 100% after 150 minutes ( Preparing to wash is a 30 minutes process ) + ( Washing clothes is a 60 minutes process ) + ( Drying clothes is a 60 minutes process )
@@ -86,8 +86,9 @@ There will be two types of Users – Admin (the Owner) and Customer.
 
 #### Future Scope:
 
-- Role based authentication
-- Improved styling
+- Role based authentication: Login and Sign up authentication can be done based on roles in order to provide access to dashboard/admin dashboard
+- Improved styling: The style (css) of the website can be improved
+- Features: More features can be added to solve real life problems such as pickup, delivery, subscription, etc
 
 #### Challenges faced:
 
