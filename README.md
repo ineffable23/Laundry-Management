@@ -1,8 +1,8 @@
 # Full Stack Application Development using MEAN
 
-## Laundry Management
+### Laundry Management
 
-### Problem Statement :
+## Problem Statement :
 
 Nobel Laundry Pvt.Ltd. is a popular laundry and dry cleaner services in Pune. They need to use an application for tracking clothes given to them for washing or ironing service of various types of clothes given by their customers. The application needs to maintain details about Details of Clothes, Customers, Status Tracking, Billing and Delivery. 
 There will be two types of Users – Admin (the Owner) and Customer. 
@@ -41,9 +41,9 @@ There will be two types of Users – Admin (the Owner) and Customer.
 
 <hr>
 
-### Solution : 
+## Solution : 
 
-#### Functionality
+#### Functionality:
 
 - Upon starting up, the application will give options for Log in, Sign up, forgot password, verify email, user dashboard, admin dashboard, home.
 - Sign up page takes Name, Email, Password and stores in firestore database.
@@ -105,6 +105,10 @@ There will be two types of Users – Admin (the Owner) and Customer.
 - ![Screenshot (447)](https://user-images.githubusercontent.com/49369387/163671221-64aed767-1e1a-4ecc-85ee-87a72cb6ed8a.png)
   
   
- #### Project Presentation :
- - [Laundry-Management-Presentation]()
+ ## Project Presentation :
+<!--  - [Laundry-Management-Presentation](https://user-images.githubusercontent.com/49369387/163675567-aa56e2e5-1014-4d99-8107-6a55e04999db.mp4) -->
+[<img src="https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg" width="50%">](https://user-images.githubusercontent.com/49369387/163675567-aa56e2e5-1014-4d99-8107-6a55e04999db.mp4 "Now in Android: 55")
 
+
+ ## Project Wireframe :
+ [Laundry Management Wireframe](https://github.com/ineffable23/Laundry-Management/blob/main/Laundry%20Management%20wireframe.pdf)
