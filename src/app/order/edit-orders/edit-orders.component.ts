@@ -50,7 +50,7 @@ export class EditOrdersComponent implements OnInit {
   get clothColor() {
     return this.editForm.get('clothColor');
   }
-  updateStudentData() {
+  updateOrdersData() {
     this.editForm = this.fb.group({
       firstName: ['', [Validators.required, Validators.minLength(2)]],
       email: [

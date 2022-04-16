@@ -10,7 +10,7 @@ import {
   providedIn: 'root',
 })
 export class CrudService {
-  UpdateStudent(value: any) {
+  UpdateOrders(value: any) {
     throw new Error('Method not implemented.');
   }
   GetOrdersList: any;
@@ -31,17 +31,17 @@ export class CrudService {
       clothColor: orders.clothColor,
     });
   }
-  // Fetch Single Student Object
+  // Fetch Single Order Object
   GetOrderss(id: string) {
     this.ordersRef = this.db.object('orderss-list/' + id);
     return this.ordersRef;
   }
-  // Fetch Students List
+  // Fetch Orders List
   GetOrderssList() {
     this.orderssRef = this.db.list('orderss-list');
     return this.orderssRef;
   }
-  // Update Student Object
+  // Update Orders Object
   UpdateOrderss(orders: OrdersComponent) {
     this.ordersRef.update({
       Name: orders.Name,
@@ -52,7 +52,7 @@ export class CrudService {
       clothColor: orders.clothColor,
     });
   }
-  // Delete Student Object
+  // Delete Orders Object
   DeleteOrderss(id: string) {
     this.ordersRef = this.db.object('orderss-list/' + id);
     this.ordersRef.remove();

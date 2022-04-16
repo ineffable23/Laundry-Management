@@ -38,9 +38,6 @@ export class AddOrdersComponent implements OnInit {
   get Name() {
     return this.ordersForm.get('Name');
   }
-  // get lastName() {
-  //   return this.studentForm.get('lastName');
-  // }
   get email() {
     return this.ordersForm.get('email');
   }

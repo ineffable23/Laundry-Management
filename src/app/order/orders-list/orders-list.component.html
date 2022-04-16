@@ -9,7 +9,7 @@
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h2 class="h2">Orders List</h2>
-    <a routerLink="/register-student" class="btn btn-success" *ngIf="hideWhenNoOrders">
+    <a routerLink="/register-orders" class="btn btn-success" *ngIf="hideWhenNoOrders">
         Add Cloth
     </a>
 </div>
@@ -18,7 +18,7 @@
         <img src="assets/preloader.gif" class="preloader-icon" alt="No order" />
     </div>
     <div class="no-data text-center" *ngIf="noData">
-        <img src="assets/no-order.svg" class="nodata-msg" alt="No student" />
+        <img src="assets/no-order.svg" class="nodata-msg" alt="No orders" />
         <p class="nodata-msg">No clothes added yet!</p>
         <a routerLink="/register-orders" class="btn btn-success"> Add Cloth </a>
     </div>
@@ -51,7 +51,7 @@
                     <td>{{ orders.clothcolor}}</td>
                     <td class="text-center action-block">
                         <span class="mr-2 btn btn-outline-primary btn-sm"
-                            routerLink="/edit-student/{{ orders.$key }}">Edit</span>
+                            routerLink="/edit-orders/{{ orders.$key }}">Edit</span>
                         <span class="btn btn-outline-danger btn-sm" (click)="deleteOrders(orders)">Delete</span>
                     </td>
                 </tr>

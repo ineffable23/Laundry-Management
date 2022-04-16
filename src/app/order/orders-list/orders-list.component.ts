@@ -44,7 +44,7 @@ export class OrdersListComponent implements OnInit {
       }
     })
   }
-  deleteStudent(orders) {
+  deleteOrderss(orders) {
     if (window.confirm('Are sure you want to delete this order ?')) { 
       this.crudApi.DeleteOrderss(orders.$key)
       this.toastr.success(orders.firstName + ' successfully deleted!');
