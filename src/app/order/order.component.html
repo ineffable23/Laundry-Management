@@ -1,0 +1,41 @@
+<!-- Top navigation -->
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" routerLink="/register-student">
+      <span class="dasboard-text">Dashboard</span>
+    </a>
+    <ul class="navbar-nav px-3">
+      <li class="nav-item text-nowrap">
+        <a class="nav-link" routerLink="/register-student">
+          <span class="user-image" style="background-image: url('assets/user.jpg')"></span>
+          Hello 
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- Sidebar navigation -->
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-2 d-md-block bg-light sidebar">
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/register-student" routerLinkActive="active">
+                Add Student
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/view-students" routerLinkActive="active">
+                Students List
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Main content -->
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <div class="inner-adjust">
+          <!-- <router-outlet></router-outlet> -->
+        </div>
+      </main>
+    </div>
+  </div>

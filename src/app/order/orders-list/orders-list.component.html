@@ -1,0 +1,62 @@
+<br>
+<button mat-raised-button color="primary" routerLink="/home">
+    <mat-icon>home</mat-icon>
+    <span>Home</span>
+    </button>
+    <br>
+    <br>
+    <mat-divider></mat-divider>
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h2 class="h2">Orders List</h2>
+    <a routerLink="/register-student" class="btn btn-success" *ngIf="hideWhenNoOrders">
+        Add Cloth
+    </a>
+</div>
+<div class="pricing-header mx-auto">
+    <div class="no-data text-center" *ngIf="preLoader">
+        <img src="assets/preloader.gif" class="preloader-icon" alt="No order" />
+    </div>
+    <div class="no-data text-center" *ngIf="noData">
+        <img src="assets/no-order.svg" class="nodata-msg" alt="No student" />
+        <p class="nodata-msg">No clothes added yet!</p>
+        <a routerLink="/register-orders" class="btn btn-success"> Add Cloth </a>
+    </div>
+    <div class="table-responsive" *ngIf="hideWhenNoOrders">
+        <table class="table table-bordered table-responsive-sm table-responsive-md table-responsive-lg">
+            <thead>
+                <tr>
+                    <th scope="col">Order Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Mobile number</th>
+                    <th scope="col">Cloth type</th>
+                    <th scope="col">Cloth fabric</th>
+                    <th scope="col">Cloth colour</th>
+                    <th class="text-center" scope="col">Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="
+            let orders of Orders
+              | paginate: { itemsPerPage: 10, currentPage: p};
+            let i = index
+          ">
+                    <th scope="row">{{ Orders.$key }}</th>
+                    <td>{{ orders.Name }}</td>
+                    <td>{{ orders.email }}</td>
+                    <td>{{ orders.mobileNumber }}</td>
+                    <td>{{ orders.clothtype }}</td>
+                    <td>{{ orders.clothfabric }}</td>
+                    <td>{{ orders.clothcolor}}</td>
+                    <td class="text-center action-block">
+                        <span class="mr-2 btn btn-outline-primary btn-sm"
+                            routerLink="/edit-student/{{ orders.$key }}">Edit</span>
+                        <span class="btn btn-outline-danger btn-sm" (click)="deleteOrders(orders)">Delete</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

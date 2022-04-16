@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "skeleton-a81ca": {
+      "hosting": {
+        "angular-firebase-dashboard": [
+          "skeleton-a81ca"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+Dashboard
+
+<br>
+<br>
+<button mat-raised-button color="primary" routerLink="/home">
+    <mat-icon>home</mat-icon>
+    <span>Home</span>
+</button>
+<br>
+<br>
+<mat-divider></mat-divider>
+<br>
+<button type="button" color="primary" mat-stroked-button class="btn btn-success" (click)="Showprogressbar()">Track Status</button>  
+<br>
+<br>
+<!-- progressbar buttons for telling status-->
+
+<section>
+  <div class="example-label">Status</div>
+  <div class="example-button-row">
+    <div class="example-flex-container">
+      <div class="example-button-container">
+        <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+            <mat-icon>hourglass_empty</mat-icon>
+        </button>
+      </div>
+      <div class="example-button-container">
+        <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
+            <mat-icon> local_laundry_service</mat-icon>
+        </button>
+      </div>
+      <div class="example-button-container">
+        <button mat-fab color="primary" aria-label="Example icon button with a home icon">
+            <mat-icon>alarm</mat-icon>
+        </button>
+      </div>
+      <div class="example-button-container">
+        <button mat-fab color="accent" aria-label="Ready for pickup">
+          <mat-icon>check_circle</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- progressbar -->
+  <div class="row" style="margin-top:10px;margin-bottom: 24px;">          
+    <div class="col-sm-12 btn btn-success">          
+         
+    </div>          
+  </div>      
+  
+<div class="container">  
+<div style="position: relative">  
+  <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>  
+  <span style="position: absolute; top: 0.5em;" [ngStyle]="{'left': progress + '%'}"></span>  
+</div>  
+  
+<div class="d-flex justify-content-end">  
+  <span class="completed_progress_bar">{{progress}}% completed (<span id="countdown"></span> second to start)</span>  
+</div>  
+  
+</div>
+<br><br>
+<mat-divider></mat-divider>
+
+<br>
+  <!-- add clothes button -->
+  <button mat-stroked-button color="primary" routerLink="/add-orders">
+    <mat-icon>local_laundry_service</mat-icon>
+    <span>Add Clothes</span>
+</button>
+  <br>
+  <br>
+<mat-divider></mat-divider>
+
+<br>
+  <!-- user data  -->
+  <mat-list *ngIf="(user | async)">
+    <mat-list-item>Account Type: {{ (user | async)?.accountType }}</mat-list-item>
+    <mat-list-item>Display Name: {{ (user | async)?.displayName }}</mat-list-item>
+    <mat-list-item>Display Name (lower): {{ (user | async)?.displayName_lower }}</mat-list-item>
+    <mat-list-item>Email: {{ (user | async)?.email }}</mat-list-item>
+    <mat-list-item>Email (lower): {{ (user | async)?.email_lower }}</mat-list-item>
+    <mat-list-item>Email Verification Status: {{ (afAuth.user | async)?.emailVerified }}</mat-list-item>
+  </mat-list>
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+

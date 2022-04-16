@@ -1,0 +1,83 @@
+Admin Dashboard
+
+<br>
+<br>
+<button mat-raised-button color="primary" routerLink="/home">
+    <mat-icon>home</mat-icon>
+    <span>Home</span>
+</button>
+
+
+<br>
+<br>
+
+<div *ngIf="(user | async)?.accountType == 'admin'; else notAdmin">
+    Hello Admin!
+    <mat-divider></mat-divider>
+        <br>
+        
+        <!-- Read clothes order button -->
+        <button mat-stroked-button color="primary" routerLink="/orders-list">
+            <mat-icon>local_laundry_service</mat-icon>
+            <span>View Orders</span>
+        </button>
+        <br>
+        <br>
+        <mat-divider></mat-divider>
+
+        <br>
+
+        <!-- delete/search clothes order button -->
+        <button mat-stroked-button color="primary" routerLink="/orders-list">
+            <mat-icon>search</mat-icon>
+            <span>Search or Delete</span>
+            <mat-icon>delete</mat-icon>
+        </button>
+        <br>
+        <br>
+        <mat-divider></mat-divider>
+
+        <br>
+
+         <!-- create/update clothes order button -->
+         <button mat-stroked-button color="primary" routerLink="/edit-orders">
+            <mat-icon>add_shopping_cart</mat-icon>
+            <mat-icon>settings</mat-icon>
+            <span>Edit Orders</span>
+        </button>
+        <br>
+        <br>
+        <mat-divider></mat-divider>
+
+        <br>
+
+        <!-- Admin data  -->
+        <mat-list *ngIf="(user | async)">
+            <mat-list-item>Account Type: {{ (user | async)?.accountType }}</mat-list-item>
+            <mat-list-item>Display Name: {{ (user | async)?.displayName }}</mat-list-item>
+            <mat-list-item>Display Name (lower): {{ (user | async)?.displayName_lower }}</mat-list-item>
+            <mat-list-item>Email: {{ (user | async)?.email }}</mat-list-item>
+            <mat-list-item>Email (lower): {{ (user | async)?.email_lower }}</mat-list-item>
+            <mat-list-item>Email Verification Status: {{ (afAuth.user | async)?.emailVerified }}</mat-list-item>
+        </mat-list>
+
+
+
+
+
+
+        
+        
+
+
+
+
+        
+
+
+</div>
+
+<ng-template #notAdmin>
+    Not admin
+</ng-template>
+

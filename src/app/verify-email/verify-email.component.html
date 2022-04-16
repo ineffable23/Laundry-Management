@@ -1,0 +1,34 @@
+Verify Email
+<br>
+<br>
+<button mat-raised-button color="primary" routerLink="/home">
+    <mat-icon>home</mat-icon>
+    <span>Home</span>
+</button>
+
+<mat-card *ngIf="!(afAuth.user | async)">
+    <mat-icon>do_not_disturb</mat-icon>
+    <span>User is not logged in -- the user needs to be logged in to resend the verification email</span>
+</mat-card>
+
+<mat-card>
+
+    <p>A verification email will be sent to <span>{{ email }}</span>.</p>
+
+    <div *ngIf="firebaseErrorMessage != ''" class="error-style">
+        <span>{{ firebaseErrorMessage }}</span>
+    </div>
+
+    <button mat-raised-button color="primary" [disabled]="mailSent" (click)="resendVerificationEmail()">Resend verification email</button>
+    <div *ngIf="mailSent">
+        <p>An email has been sent!</p>
+        <button mat-raised-button color="primary" routerLink="/home">
+            <mat-icon>home</mat-icon>
+            <span>Return Home</span>
+        </button>
+    </div>
+</mat-card>
+
+<div class="progressIndicator" [style.display]="isProgressVisible ? 'inline' : 'none' ">
+    <mat-progress-spinner class=" example-margin" color="primary" mode="indeterminate"></mat-progress-spinner>
+</div>
