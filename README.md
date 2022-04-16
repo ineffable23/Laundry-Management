@@ -114,7 +114,7 @@ There will be two types of Users – Admin (the Owner) and Customer.
   
  ## Project Presentation :
 <!--  - [Laundry-Management-Presentation](https://user-images.githubusercontent.com/49369387/163675567-aa56e2e5-1014-4d99-8107-6a55e04999db.mp4) -->
-[<img src="https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg" width="50%">](https://user-images.githubusercontent.com/49369387/163675567-aa56e2e5-1014-4d99-8107-6a55e04999db.mp4 "Now in Android: 55")
+[<img src="https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg" width="50%">](https://user-images.githubusercontent.com/49369387/163678116-f4fc24cf-5b87-40e3-a9a2-855fa8eaf1da.mp4 "Now in Android: 55")
 
 
  ## Project Wireframe :
