@@ -1,7 +1,8 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # preventing Firebase environment files from saving to git
-/src/environments/**
+# /src/environments/**
+# uploading environments file
 
 # compiled output
 /dist
