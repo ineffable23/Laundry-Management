@@ -1,3 +1,6 @@
+# Recreated the project using MEAN and resolved all the errors and other issues ->
+  [Nobel-Laundry](https://github.com/ineffable23/Nobel-Laundry)
+<hr>
 # Full Stack Application Development using MEAN
 
 ### Laundry Management
